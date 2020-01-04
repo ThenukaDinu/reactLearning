@@ -12,15 +12,29 @@ class App extends Component {
       { name: 'Crystal', age: 25, belt: 'pink', id: 3 }
     ]
   }
-  AddNinja = ()
+  addNinja = (ninja) => {
+    ninja.id = Math.random();
+    let ninjas = [...this.state.ninjas, ninja]
+    this.setState({
+      ninjas: ninjas
+    })    
+  }
 
+  deleteNinja = (id) => {
+    let ninjas = this.state.ninjas.filter(ninja => {
+      return ninja.id !== id
+    })
+    this.setState({
+      ninjas: ninjas
+    })        
+  }
   render() {
     return (
       <div className="App">
         <h1>My First React App</h1>
         <p>Welcome </p>
-        <Ninjas ninjas={ this.state.ninjas  /* Pass data to child component*/ } /> 
-        <AddNinja></AddNinja>
+        <Ninjas deleteNinja={this.deleteNinja} ninjas={ this.state.ninjas  /* Pass data to child component*/ } /> 
+        <AddNinja addNinja={this.addNinja}></AddNinja>
       </div>
     );  
   }

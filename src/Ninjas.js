@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Ninjas = ({ninjas}) => {  /* Destructuring directly array return from App.js (root) Component*/  
+const Ninjas = ({ninjas, deleteNinja}) => {  /* Destructuring directly array return from App.js (root) Component*/  
 
     /*const { ninjas } = props; // Destructuring array return from App.js (root) Component */
 
@@ -24,11 +24,12 @@ const Ninjas = ({ninjas}) => {  /* Destructuring directly array return from App.
             <div>Name: { ninja.name }</div>
             <div>Age: { ninja.age }</div>
             <div>Belt: { ninja.belt }</div>
+            <button onClick={() =>{deleteNinja(ninja.id)}}>Delete Ninja</button>
         </div>
         ) : null
     })
 
-    
+
     return (
         <div className="ninja-list">
         { ninjaList /*Show all ninjas data return from root */ }
