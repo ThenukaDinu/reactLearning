@@ -27,6 +27,8 @@ const Ninjas = ({ninjas}) => {  /* Destructuring directly array return from App.
         </div>
         ) : null
     })
+
+    
     return (
         <div className="ninja-list">
         { ninjaList /*Show all ninjas data return from root */ }

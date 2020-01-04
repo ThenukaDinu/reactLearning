@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Ninjas from './Ninjas';
+import AddNinja from './AddNinja';
 
 class App extends Component {
 
@@ -11,6 +12,7 @@ class App extends Component {
       { name: 'Crystal', age: 25, belt: 'pink', id: 3 }
     ]
   }
+  AddNinja = ()
 
   render() {
     return (
@@ -18,6 +20,7 @@ class App extends Component {
         <h1>My First React App</h1>
         <p>Welcome </p>
         <Ninjas ninjas={ this.state.ninjas  /* Pass data to child component*/ } /> 
+        <AddNinja></AddNinja>
       </div>
     );  
   }
