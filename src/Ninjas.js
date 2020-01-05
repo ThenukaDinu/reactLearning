@@ -1,4 +1,5 @@
 import React from 'react';
+import './Ninjas.css';
 
 const Ninjas = ({ninjas, deleteNinja}) => {  /* Destructuring directly array return from App.js (root) Component*/  
 
