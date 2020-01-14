@@ -20,6 +20,7 @@ class App extends Component {
     })    
   }
 
+  //Delete ninja function
   deleteNinja = (id) => {
     let ninjas = this.state.ninjas.filter(ninja => {
       return ninja.id !== id
